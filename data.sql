@@ -2,6 +2,7 @@ create database BankApp;
 
 use BankApp;
 
+drop table if exists User_login;
 
 create table User_login(
      userId int primary key,
@@ -9,6 +10,8 @@ create table User_login(
      last_login_time timestamp not null);
 	
 insert into User_Login values(19080001,'Kmit123$',now());
+
+drop table if exists Registration;
 
 create  table Registration(
       account_no varchar(15) primary key,
@@ -24,7 +27,7 @@ create  table Registration(
 	  account_type varchar(10) not null,
 	  balance decimal(20,4) not null check(balance > 5000.0),
 	  customer_id int not null,
-	  ifsc_code varchar(13));
+	  ifsc_code varchar(13) not null);
 	  
 	  
  insert into registration values( 138910000123456,'ABCDG0000H','saikumar','rao','pragada',7095079215,'xyz@gmail.com','1997-01-01','2-11,serilimgampally,financial district,hyd',508080,'savings',5001.999,19080001,'DBSH000389');
@@ -63,4 +66,5 @@ acc_no int primary key,
 acc_type varchar(20) not null,
 cust_id int not null,
 amount decimal(20,4) not null,
-constraint `fk_key` foreign key(cust_id) references Customer_details(cust_id) ); 
+ifsc_code varchar(13) not null,
+constraint `fk_key` foreign key(cust_id) references Customer_details(cust_id));
