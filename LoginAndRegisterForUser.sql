@@ -11,7 +11,7 @@ create table User_login(
 insert into User_Login values(19080001,'Kmit123$',now());
 
 create  table Registration(
-      account_no int primary key,
+      account_no varchar(15) primary key,
 	  pan_no varchar(10) not null,
 	  firstname varchar(30) not null,
 	  middlename varchar(30),
