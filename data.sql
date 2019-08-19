@@ -11,7 +11,7 @@ drop table if exists Account;
 create table CustomerDetails(custid int NOT NULL primary key,custname varchar(30) NOT NULL,phno int NOT NULL,
 email varchar(50),custaddress varchar(50) NOT NULL,custpan varchar(10) NOT NULL UNIQUE);
 
-create table Login(loginid int,
+create table Cust_Login(loginid int,
 pwd varchar(15) not null,
 lastlogin timestamp,
 constraint `log_key` foreign key(loginid) references CustomerDetails(custid));
