@@ -42,7 +42,8 @@ drop table if exists Customer_transaction;
 
 drop table if exists Customer_account;
 
-create table Customer_details(cust_id int primary key,cust_name varchar(30) NOT NULL,phno int NOT NULL,
+create table Customer_details(cust_id int primary key,cust_firstname varchar(30) NOT NULL,cust_middlename varchar(30),
+cust_lastname varchar(30),phno varchar(20) NOT NULL,
 email varchar(50) not null,cust_address varchar(50) NOT NULL,cust_pan varchar(10) NOT NULL UNIQUE);
 
 create table Customer_login(
