@@ -58,7 +58,8 @@ fromacc int not null,
 toacc int not null,
 trans_time timestamp not null,
 amount decimal(20,2),
-trans_type varchar(10) not null
+trans_type varchar(10) not null,
+trans_status varchar(11) not null
 );
 
 create table Customer_account(
