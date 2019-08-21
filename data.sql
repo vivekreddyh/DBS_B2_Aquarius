@@ -5,7 +5,7 @@ use BankApp;
 drop table if exists User_login;
 
 create table User_login(
-     userId int primary key,
+     userid int primary key,
      password varchar(15) not null,
      last_login_time timestamp not null);
 	
