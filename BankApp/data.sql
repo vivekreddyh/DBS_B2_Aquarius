@@ -5,7 +5,7 @@ use BankApp;
 drop table if exists User_login;
 
 create table User_login(
-     userid int primary key,
+     userId int primary key,
      password varchar(15) not null,
      last_login_time timestamp not null);
 	
@@ -27,7 +27,8 @@ create  table Registration(
 	  account_type varchar(10) not null,
 	  balance decimal(20,4) not null check(balance > 5000.0),
 	  customer_id int not null,
-	  ifsc_code varchar(13) not null);
+	  ifsc_code varchar(13) not null,
+	  account_status varchar(10) not null default "Active");
 	  
 	  
  insert into registration values( 138910000123456,'ABCDG0000H','saikumar','rao','pragada',7095079215,'xyz@gmail.com','1997-01-01','2-11,serilimgampally,financial district,hyd',508080,'savings',5001.999,19080001,'DBSH000389');
@@ -42,8 +43,7 @@ drop table if exists Customer_transaction;
 
 drop table if exists Customer_account;
 
-create table Customer_details(cust_id int primary key,
-cust_firstname varchar(30) NOT NULL,cust_middlename varchar(30),
+create table Customer_details(cust_id int primary key,cust_firstname varchar(30) NOT NULL,cust_middlename varchar(30),
 cust_lastname varchar(30),phno varchar(20) NOT NULL,
 email varchar(50) not null,cust_address varchar(50) NOT NULL,cust_pan varchar(10) NOT NULL UNIQUE);
 
@@ -70,4 +70,5 @@ acc_type varchar(20) not null,
 cust_id int not null,
 amount decimal(20,4) not null,
 ifsc_code varchar(13) not null,
+acc_status varchar(10) not null,
 constraint `fk_key` foreign key(cust_id) references Customer_details(cust_id));
