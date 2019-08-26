@@ -72,3 +72,21 @@ amount decimal(20,4) not null,
 ifsc_code varchar(13) not null,
 acc_status varchar(10) not null,
 constraint `fk_key` foreign key(cust_id) references Customer_details(cust_id));
+
+**********************Triggers on customer transactions **************
+
+Delimiter // 
+drop trigger updateCustomerBalanaceTrigger;
+create  TRIGGER updateCustomerBalanaceTrigger
+     after insert on customer_transaction_1
+	 for each row
+BEGIN
+	IF NEW.trans_type like 'DEBIT' AND NEW.trans_status like 'SUCCESS' THEN 
+		update customer_account set customer_account.amount = customer_account.amount - NEW.amount where acc_no = NEW.fromacc;
+		update customer_account set customer_account.amount = customer_account.amount + NEW.amount where acc_no = NEW.toacc;
+	END IF;
+END; //
+Delimiter ; 
+
+grant all on *.* to 'localhost'@'%' identified by 'password';
+flush privileges
