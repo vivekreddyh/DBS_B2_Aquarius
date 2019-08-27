@@ -1,0 +1,41 @@
+
+
+
+<div class="container" id="cont">
+    
+   <p class="heading">FAQs</p>
+   <hr>
+    <div class="card img-fluid"  >
+            <a (click)="call1()" class="btn btn-info btn-sm" id="icon">
+                    <span class="glyphicon glyphicon-plus"></span> 
+                  </a> 
+        <a class="questions"  >I do not have a digi Internet Banking User ID/password, how can I obtain one? </a><br>
+        <span class="answers" *ngIf="bool1==true">To use digi internet banking, please use the same credentials as the digibank app.</span>
+      </div>
+
+      <div>
+        <a (click)="call2()" class="btn btn-info btn-sm" id="icon">  
+                <span class="glyphicon glyphicon-plus"></span> 
+            </a>   
+        <a class="questions" >Where can i use Digi Internet Banking ? </a><br>
+        <span class="answers" *ngIf="bool2==true">digi Internet Banking is available to all digiSavings customers. Don't wait, come and see us now at : internet-banking.retail.dbsbank.in </span>
+      </div>
+
+      <div >
+        <a (click)="call3()" class="btn btn-info btn-sm" id="icon"> 
+                <span class="glyphicon glyphicon-plus"></span>
+            </a>   
+        <a class="questions">What kind of fees does digibank charge? </a><br>
+        <span class="answers"  *ngIf="bool3==true">For the latest information on fees, please refer to our Rates & Fees page.
+
+        </span>
+      </div>
+      <div >
+        <a (click)="call4()" class="btn btn-info btn-sm" id="icon">
+                <span class="glyphicon glyphicon-plus"></span> 
+            </a>  
+        <a class="questions">What kind of safety features does digi banking have? </a><br>
+        <span class="answers" *ngIf="bool4==true">Your security is extremely important to us, and we've gone to great lengths to ensure it. Within the digi internet banking, we use two-factor authentication (2FA) except for funds transfer limit which is capped at INR 2000 per transaction subjected to an overall daily limit of INR 10000.</span>
+      </div>
+    
+  </div>
