@@ -84,7 +84,7 @@ insert into Customer_account values(138910000123456,'Savings',101,5001,'DBSH0003
 **********************Triggers on customer transactions **************
 
 Delimiter // 
-drop trigger updateCustomerBalanaceTrigger;
+drop trigger if exists updateCustomerBalanaceTrigger;
 create  TRIGGER updateCustomerBalanaceTrigger
      after insert on customer_transaction_1
 	 for each row
