@@ -65,7 +65,7 @@ trans_status varchar(11) not null
 );
 
 create table Customer_account(
-acc_no int primary key,
+acc_no varchar(16) primary key,
 acc_type varchar(20) not null,
 cust_id int not null,
 amount decimal(20,4) not null,
