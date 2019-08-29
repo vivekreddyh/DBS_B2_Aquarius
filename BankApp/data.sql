@@ -59,8 +59,8 @@ insert into Customer_login values(101,'pass224637',now());
 				  
 create table Customer_transaction(
 tid int AUTO_INCREMENT primary key,
-fromacc int not null, 
-toacc int not null,
+fromacc varchar(16) not null, 
+toacc varchar(16) not null,
 trans_time timestamp not null,
 amount decimal(20,2),
 trans_type varchar(10) not null,
