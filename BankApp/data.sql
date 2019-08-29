@@ -48,6 +48,7 @@ cust_lastname varchar(30),phno varchar(20) NOT NULL,
 email varchar(50) not null,cust_address varchar(50) NOT NULL,cust_pan varchar(10) NOT NULL UNIQUE);
 			      
 insert into Customer_details values(101,'Sai','Pragada','Kumar',9053725173,'saikumar@gmail.com','h no 101, taranagar','DBSH000389');
+ insert into customer_details values(102,'Subash','Narikella','Manikanta',9026320133,'saisubash@gmail.com','xyz 783,dbs india','2935DWSG');
 create table Customer_login(
 login_id int,
 pwd varchar(15) not null,
@@ -80,6 +81,8 @@ constraint `fk_key` foreign key(cust_id) references Customer_details(cust_id));
 								     
 //dummy data
 insert into Customer_account values(138910000123456,'Savings',101,5001,'DBSH000389','Active');
+ insert into customer_account values('138910000123458','Savings',102,10000,'DBSH000376','Active');
+insert into customer_account values('138910000123457','Savings',102,10000,'DBSH000376','Active');								    
 
 **********************Triggers on customer transactions **************
 
