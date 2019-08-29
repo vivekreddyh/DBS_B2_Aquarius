@@ -86,7 +86,7 @@ insert into Customer_account values(138910000123456,'Savings',101,5001,'DBSH0003
 Delimiter // 
 drop trigger if exists updateCustomerBalanaceTrigger;
 create  TRIGGER updateCustomerBalanaceTrigger
-     after insert on customer_transaction_1
+     after insert on customer_transaction
 	 for each row
 BEGIN
 	IF NEW.trans_type like 'DEBIT' AND NEW.trans_status like 'SUCCESS' THEN 
