@@ -46,7 +46,8 @@ drop table if exists Customer_account;
 create table Customer_details(cust_id int primary key,cust_firstname varchar(30) NOT NULL,cust_middlename varchar(30),
 cust_lastname varchar(30),phno varchar(20) NOT NULL,
 email varchar(50) not null,cust_address varchar(50) NOT NULL,cust_pan varchar(10) NOT NULL UNIQUE);
-
+			      
+insert into Customer_details values(101,'Sai','Pragada','Kumar',9053725173,'saikumar@gmail.com','h no 101, taranagar','DBSH000389');
 create table Customer_login(
 login_id int,
 pwd varchar(15) not null,
