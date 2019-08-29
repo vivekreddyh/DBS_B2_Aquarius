@@ -1,0 +1,34 @@
+.done {
+  content:'[add icon symbol here]';
+  font-family: [my cool web icon font here];
+  display:inline-block;
+  vertical-align: top;
+  line-height: 1em;
+  width: 1em;
+  height:1em;
+  margin-right: 0.3em;
+  text-align: center;
+  color: #999;
+    
+  }
+
+  .divBlockTransaction_1{
+    width: 400px;
+    height: 200px;
+    background-color:#d3cec5;
+    position: relative;
+  }
+
+  #addQuestion{
+   
+    width: 100%;
+    color: #333333;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    float: none;
+}

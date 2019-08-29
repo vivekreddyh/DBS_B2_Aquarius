@@ -1,0 +1,88 @@
+
+<div *ngIf = "toggleMsg">
+<div class="container">
+        <div class="row">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4">
+                                <div style="text-align:center">
+                                    <span></span><br>
+                                </div>
+                </div>
+                <div class="col-xs-4"></div>
+        </div>
+    <div class="row">
+        <div>
+            <div class="col-xs-4"></div>
+            <h1>Done! Transfer Completed</h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+            <div class="col-xs-5"></div>
+            <div class="col-xs-4"> 
+                <button class="btn btn-primary" (click)="redirectHomePage();">Home Page</button>
+                </div>
+    </div>
+</div>
+</div>
+<div *ngIf="!toggleMsg">
+        <div class="container">
+                <div class="row">
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4">
+                                        <div style="text-align:center">
+                                            <span></span><br>
+                                          
+                                        </div>
+                        </div>
+                        <div class="col-xs-4"></div>
+                </div>
+            <div class="row">
+                <div>
+                    <div class="col-xs-4"></div>
+                    <h1>Done! Transfer failed</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                    <div class="col-xs-5"></div>
+                    <div class="col-xs-4"> 
+                        <button class="btn btn-primary" (click)="redirectHomePage();">Home Page</button>
+                        </div>
+            </div>
+        </div>
+    </div>
+<!-- <div class="container">
+        <div class="row">
+            
+               
+                        <div class="col-xs-4"></div>
+                        <div class="col-xs-4"> 
+                                    <table class="table table-striped" >
+                                            <div class="table responsive" style="padding: 25px">  
+                                               
+                                                <tr>
+                                                    <td>From Account Number</td>
+                                                    <td><span><label>&nbsp;&nbsp;</label></span>{{fromacc}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>To Account Number</td>
+                                                    <td> {{toacc}}</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Amount</td>
+                                                        <td>{{amount}}</td>
+                                                </tr>
+                                    </div>
+                                </table>
+                                </div>
+                            
+                             <div class="col-xs-3"></div>
+                    </div>
+                       
+        
+</div> -->
+
+

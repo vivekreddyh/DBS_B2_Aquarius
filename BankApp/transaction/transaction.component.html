@@ -1,0 +1,109 @@
+
+<div class="container">
+    <div class="row">
+            
+        <div class="col-xs-3" style="margin-block: 10px;">
+        <button  class="btn btn-primary" (click)="getCalled()">
+                &lt; Back
+        </button>
+        </div>
+        <div  class="col-xs-6" style="text-align:center;">
+               <b style="text-align:center;"> <span><h2>Transfer Funds</h2></span></b>
+            </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+        </div>
+        <div class="col-xs-7">
+            <div class="divBlockTransaction">
+                <div class="col-xs-2">
+                    <div style="text-align:center">
+                        <span></span><br>
+                        <span class="dotted"></span><br>
+                        <span class="dot"></span><br>
+                        <span class="dot"></span><br>
+                    </div>
+                </div>
+                <div  class="col-xs-7" style="margin:20px">
+                    <span >
+                        <label>
+                            From:customerSavings (Bal:&#x20b9;{{fromAccountBalance}})<br>
+                            <span class="text-primary"> 
+                            Account no::{{fromAccountNumber}}
+                        </span>
+                    </label></span>
+                    <span><label></label></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-2"></div>
+    </div>
+</div>
+<div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+            </div>
+            <div class="col-xs-7">
+                <div class="divBlockTransaction"  style="border-top: 1px solid red">
+                    <div class="col-xs-2">
+                            <div>
+                                    <img src="https://icon-library.net/images/user-icon-flat/user-icon-flat-13.jpg" height="70" width="60" alt="account icon" class="imgTag"/>
+                                </div>
+                    </div>
+                    <div  class="col-xs-5" style="margin:20px">
+                        <span >
+                            <label>
+                                To:customerSavings<br>
+                                <span class="text-primary"> 
+                                Account no::
+                            </span>
+                        </label></span>
+                        
+                    </div>
+                    <div class="col-xs-3" style="margin:20px;">
+                            <button  class="btn btn-danger" (click) = "payeeSelected()">Select Payee</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-2"></div>
+        </div>
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div class="row" *ngIf="isPayeeSelected">
+                    <div class="col-xs-3">
+                    </div>
+                    <div class="col-xs-7">
+                        <div class="inputFieldClass">
+                             
+                            <!-- <label>Enter the Acount Number</label>
+                             <input type="number" class="form-control" ngModel placeholder="Account number" name="accountNo" required/><br> -->
+                             <label for="account"><a style="color: red">*</a>Account Number: </label>
+                             <input type="text" class="form-control" id="account" placeholder="Account Number"  pattern="^[0-9]{12}$" ngModel name="account" required #account="ngModel">
+                             <span style="color:red" *ngIf="!account.valid && account.touched">enter valid Account Number</span><br>
+                             <label for="account"><a style="color: red">*</a>Enter the IFSC Code </label>
+                            <input type="text" class="form-control" id="ifscCode" placeholder="IFSC Code" pattern="^[A-Z]{4}0[0-9]{6}$"   ngModel name = "ifscCode" required #ifscCode="ngModel"/>
+                            <span style="color:red" *ngIf="!ifscCode.valid && ifscCode.touched">enter valid IFSC Code</span><br>
+                            <label>Enter the amount</label>
+                            <input type="number" class="form-control" id="amount" ngModel name="amount" pattern="^[1-9][0-9]*" ngModel placeholder="Daily limit upto 10000" required #amount="ngModel"/>
+                           
+                            <span style="color:red" *ngIf="( amount.value > fromAccountBalance)">
+                                Enter amount less than account balance
+                            </span><br>
+                            <div  style="align:center;">
+                                    <div class="col-xs-4"></div>
+                                    <input  type="submit" [disabled]=" !f.valid " value="Transfer Funds"  class="btn btn-danger"/>
+                            </div>
+                               
+                        </div>
+                       
+                    </div>
+                </div>
+                
+                </form>
+</div>
+<!-- <div>
+        <button class="btn btn-success" id="test1" onclick="custom1();">Pop up Button</button>
+    </div> -->
+
