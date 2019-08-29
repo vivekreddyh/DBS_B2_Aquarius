@@ -31,7 +31,7 @@ create  table Registration(
 	  account_status varchar(10) not null default "Active");
 	  
 	  
- insert into registration values( 138910000123456,'ABCDG0000H','saikumar','rao','pragada',7095079215,'xyz@gmail.com','1997-01-01','2-11,serilimgampally,financial district,hyd',508080,'savings',5001.999,19080001,'DBSH000389');
+ insert into registration values( 138910000123456,'ABCDG0000H','saikumar','rao','pragada',7095079215,'xyz@gmail.com','1997-01-01','2-11,serilimgampally,financial district,hyd',508080,'savings',5001.999,19080001,'DBSH000389','Active');
 	  
 	  
 	  
