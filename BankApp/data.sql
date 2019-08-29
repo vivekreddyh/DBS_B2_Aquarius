@@ -53,7 +53,8 @@ pwd varchar(15) not null,
 last_login_time timestamp,
 constraint `log_key` foreign key(login_id) references Customer_details(cust_id));
 
-
+insert into Customer_login values(101,'pass224637',now());
+				  
 create table Customer_transaction(
 tid int AUTO_INCREMENT primary key,
 fromacc int not null, 
@@ -64,6 +65,9 @@ trans_type varchar(10) not null,
 trans_status varchar(11) not null
 );
 
+insert into registration values( 138910000123457,'ABCDG0000H','saikumar','rao','pragada',7095079215,'xyz@gmail.com','1997-01-01','2-11,serilimgampally,financial district,hyd',
+				508080,'savings',5001.999,19080001,'DBSH000389','Active');								       
+								       
 create table Customer_account(
 acc_no varchar(16) primary key,
 acc_type varchar(20) not null,
@@ -72,6 +76,9 @@ amount decimal(20,4) not null,
 ifsc_code varchar(13) not null,
 acc_status varchar(10) not null,
 constraint `fk_key` foreign key(cust_id) references Customer_details(cust_id));
+								     
+//dummy data
+insert into Customer_account values(138910000123456,'Savings',101,5001,'DBSH000389','Active');
 
 **********************Triggers on customer transactions **************
 
